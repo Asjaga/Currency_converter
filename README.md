@@ -1,6 +1,3 @@
-Here's a `README.md` file you can use for your **Currency Converter** project on GitHub. You can copy-paste this into your repository:
-
----
 
 # 💱 Currency Converter Web App
 
