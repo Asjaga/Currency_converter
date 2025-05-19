@@ -31,11 +31,12 @@ const updateFlag = (element) =>{
 };
 
 let msg_change = async () =>{
+    let amt_value = amt.value
     let response = await fetch(`${base_url}/${fromCurrselect.value.toLowerCase()}.json`);
     let data = await response.json();
     let from_data = data[fromCurrselect.value.toLowerCase()];
-    calc = 1 * from_data[toCurrselect.value.toLowerCase()];
-    msg.innerText = `1 ${fromCurrselect.value} = ${calc} ${toCurrselect.value}`; 
+    calc = amt_value * from_data[toCurrselect.value.toLowerCase()];
+    msg.innerText = `${amt_value} ${fromCurrselect.value} = ${calc} ${toCurrselect.value}`; 
 }
 
 
