@@ -75,6 +75,11 @@ select{
 
 i{
     font-size: 1.5rem;
+
+}
+
+i:active{
+    opacity: 40%;
 }
 
 .msg{
