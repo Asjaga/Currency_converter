@@ -13,7 +13,7 @@ body{
 form{
     background-color: #EAEBD0;
     padding: 1rem;
-    height: 450px;
+    height: 458px;
     width: 350px;
     border-radius:10px ;
     text-align: center;
@@ -98,6 +98,12 @@ button{
 
 button:active{
     opacity: 50%;
+}
+
+#copyright{
+    font-size: 1rem;
+    margin-top: 1.7rem;
+    text-align: center;
 }
 
 @media (max-width: 480px) {
