@@ -79,15 +79,10 @@ A simple and interactive currency converter built with HTML, CSS, and JavaScript
 ## 🙌 Author
 
 Aakash Singh
-🔗 [LinkedIn](https://linkedin.com/in/aakash-singh)
-✉️ [Email](mailto:youremail@example.com)
+🔗 [LinkedIn](https://linkedin.com/in/asjaga)
+✉️ [Email](mailto:aakashsinghjaga@gmail.com)
 
 ---
 
-## 📃 License
 
-This project is licensed under the [MIT License](LICENSE).
 
----
-
-Let me know if you'd like me to write a more personalized section or include deployment instructions for GitHub Pages or Netlify.
