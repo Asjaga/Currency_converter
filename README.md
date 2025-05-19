@@ -4,6 +4,7 @@
 A simple and interactive currency converter built with HTML, CSS, and JavaScript. This web app allows users to convert currency values between different countries using live exchange rates.
 
 ## 🌐 Live Preview
+ https://asjaga.github.io/Currency_converter/
 
 ---
 
