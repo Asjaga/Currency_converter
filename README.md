@@ -1,0 +1,96 @@
+Here's a `README.md` file you can use for your **Currency Converter** project on GitHub. You can copy-paste this into your repository:
+
+---
+
+# 💱 Currency Converter Web App
+
+A simple and interactive currency converter built with HTML, CSS, and JavaScript. This web app allows users to convert currency values between different countries using live exchange rates.
+
+## 🌐 Live Preview
+
+---
+
+## 📸 Screenshot
+
+![image](https://github.com/user-attachments/assets/4c0614f9-083f-49ea-ad04-de79829561e5)
+![image](https://github.com/user-attachments/assets/df7696c0-2436-4136-9ea5-a4369cc246df)
+
+
+---
+
+## 🚀 Features
+
+* Convert currency between two selected countries.
+* Beautiful, responsive design.
+* Displays country flags based on selected currencies.
+* Live exchange rates (once integrated with API).
+* Font Awesome icons included for better UX.
+
+---
+
+## 🛠️ Tech Stack
+
+* **HTML5** – Structure
+* **CSS3** – Styling and Layout
+* **JavaScript** – Interactivity and Logic
+* **Font Awesome** – Icons
+
+---
+
+## 📂 Project Structure
+
+```
+├── index.html         # Main HTML file
+├── style.css          # Stylesheet for UI
+├── app.js             # JavaScript to populate dropdowns and manage logic
+├── code.js            # Additional JavaScript (possibly for API and event handling)
+├── README.md          # Project documentation
+```
+
+---
+
+## 🔧 How to Run Locally
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/currency-converter.git
+   ```
+
+2. **Navigate to the folder**
+
+   ```bash
+   cd currency-converter
+   ```
+
+3. **Open `index.html` in your browser**
+
+   * You can simply double-click the `index.html` file.
+   * Or run using a local server (recommended for JS features).
+
+---
+
+## 📦 Future Improvements
+
+* Integrate real-time exchange rate API (e.g., [ExchangeRate-API](https://www.exchangerate-api.com/), [exchangerate.host](https://exchangerate.host/)).
+* Add error handling for empty input or network errors.
+* Add a dark mode toggle.
+* Optimize for mobile devices further.
+
+---
+
+## 🙌 Author
+
+Aakash Singh
+🔗 [LinkedIn](https://linkedin.com/in/aakash-singh)
+✉️ [Email](mailto:youremail@example.com)
+
+---
+
+## 📃 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Let me know if you'd like me to write a more personalized section or include deployment instructions for GitHub Pages or Netlify.
