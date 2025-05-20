@@ -1,4 +1,3 @@
-Here’s a customized `SECURITY.md` file for your **Currency Converter** project:
 
 ---
 
