@@ -110,6 +110,50 @@ button:active{
 }
 
 #copy{
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    height: 100vh; /* height fixed na rahe */
+    padding: 1rem;
+  }
+
+  .form {
+    width: 90vw;   /* screen ke 90% width */
+    height: 520px;  /* height auto ho jaye */
+    padding: 1rem;
+    box-shadow: 2px 2px 20px 5px black; /* thoda halka shadow */
+  }
+
+  .amt input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+
+  .dropdown select {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .msg {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  #copy {
+    font-size: 0.8rem;
+
+  }
 }

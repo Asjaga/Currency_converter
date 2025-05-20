@@ -32,7 +32,7 @@ let exchange = async () =>{
     let response = await fetch(`${baseurl}/${fromCurr.value.toLowerCase()}.json`);
     let data = await response.json();
     let actualdata = data[fromCurr.value.toLowerCase()];
-    let actualvalue = actualdata[toCurr.value.toLowerCase()];
+    let actualvalue = parseFloat(actualdata[toCurr.value.toLowerCase()].toFixed(4)); ;
     let amt_value = amt.value;
     let calc = amt_value * actualvalue;
     msg.innerText = `${amt_value} ${fromCurr.value} = ${calc} ${toCurr.value}`;
