@@ -52,7 +52,7 @@ A simple and interactive currency converter built with HTML, CSS, and JavaScript
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/currency-converter.git
+   git clone https://github.com/asjaga/currency-converter.git
    ```
 
 2. **Navigate to the folder**
@@ -70,7 +70,7 @@ A simple and interactive currency converter built with HTML, CSS, and JavaScript
 
 ## 📦 Future Improvements
 
-* Integrate real-time exchange rate API (e.g., [ExchangeRate-API](https://www.exchangerate-api.com/), [exchangerate.host](https://exchangerate.host/)).
+* Integrate real-time exchange rate API 
 * Add error handling for empty input or network errors.
 * Add a dark mode toggle.
 * Optimize for mobile devices further.
