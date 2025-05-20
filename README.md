@@ -10,8 +10,8 @@ A simple and interactive currency converter built with HTML, CSS, and JavaScript
 
 ## 📸 Screenshot
 
-![image](https://github.com/user-attachments/assets/4c0614f9-083f-49ea-ad04-de79829561e5)
-![image](https://github.com/user-attachments/assets/df7696c0-2436-4136-9ea5-a4369cc246df)
+![image](https://github.com/user-attachments/assets/93cb3724-002e-43bc-bdd8-5fd3576dc39f)
+
 
 
 ---
