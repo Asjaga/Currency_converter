@@ -1,96 +1,79 @@
-let base_url ="https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies"
-
-let selector = document.querySelectorAll(".selector select");
-let fromCurr = document.querySelector(".from select");
-let toCurrselect = document.querySelector(".to select");
-let fromCurrselect = document.querySelector(".from select");
+let dropdown = document.querySelectorAll("select");
+let baseurl="https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies";
+let fromCurr  = document.querySelector("#from");
+let toCurr  = document.querySelector("#to");
 let amt = document.querySelector("input");
 let msg = document.querySelector(".msg");
-let btn = document.querySelector("button");
-let exc = document.querySelector("i");
+let btn = document.querySelector(".btn");
+let exicon = document.querySelector("i");
 
-
-
-
-exc.addEventListener("click", ()=>{
-    let temp = fromCurrselect.value;
-    fromCurrselect.value = toCurrselect.value;
-    toCurrselect.value = temp;
-    updateFlag(fromCurrselect); 
-    updateFlag(toCurrselect); 
-    msg_change();
-
-})
-
-const updateFlag = (element) =>{
-    let currCode= element.value;
-    let countryCode = countryList[currCode];
-    let img = element.closest("div").parentElement.querySelector("img.flag");
-    let newsrc = `https://flagsapi.com/${countryCode}/shiny/64.png`
-    img.src=newsrc
-};
-
-let msg_change = async () =>{
-    let amt_value = amt.value
-    let response = await fetch(`${base_url}/${fromCurrselect.value.toLowerCase()}.json`);
-    let data = await response.json();
-    let from_data = data[fromCurrselect.value.toLowerCase()];
-    calc = amt_value * from_data[toCurrselect.value.toLowerCase()];
-    msg.innerText = `${amt_value} ${fromCurrselect.value} = ${calc} ${toCurrselect.value}`; 
+let update_flag = (element) =>{
+    let currCode = element.value;
+    let countrycode = countryList[currCode];
+    let newsrc = `https://flagsapi.com/${countrycode}/flat/64.png`;
+    let img = element.closest("div").parentElement.querySelector(".flag");
+    img.src = newsrc;
 }
 
-
-for(let select of selector){
-    for(currCode in countryList){
-        let new_option = document.createElement("option");
-        new_option.innerText = currCode;
-        new_option.value = currCode;
-        select.append(new_option);
-
-        if (select.id === "from" && currCode === "USD") {
-            new_option.selected = "true";
-            updateFlag(new_option);
-            msg_change();
-
-        }
-        else if (select.id === "to" && currCode === "INR") {
-            new_option.selected = "true";
-            updateFlag(new_option);
-            msg_change();
-
-        }
-
-    }
-    
-    select.addEventListener("change", (evt) => {
-        updateFlag(evt.target);
-    })
-    select.addEventListener("change", () => {
-        msg_change();
-    })
+let excurr = () =>{
+    temp = fromCurr.value;
+    fromCurr.value = toCurr.value;
+    toCurr.value = temp;
+    update_flag(fromCurr);
+    update_flag(toCurr);
+    exchange();
 }
-
-
-
 
 let exchange = async () =>{
-    let amt_value = amt.value
-    if (amt_value == "" || amt_value < 1){
-        amt_value = 1;
-        amt.value = "1"; 
+    if (amt.value ==="" || amt.value < 1){
+        amt.value = 1;
+        amt.value = "1";
     }
-    let response = await fetch(`${base_url}/${fromCurrselect.value.toLowerCase()}.json`);
+    let response = await fetch(`${baseurl}/${fromCurr.value.toLowerCase()}.json`);
     let data = await response.json();
-    let from_data = data[fromCurrselect.value.toLowerCase()];
-    calc = amt_value * from_data[toCurrselect.value.toLowerCase()];
-    msg.innerText = `${amt_value} ${fromCurrselect.value} = ${calc} ${toCurrselect.value}`;  
+    let actualdata = data[fromCurr.value.toLowerCase()];
+    let actualvalue = actualdata[toCurr.value.toLowerCase()];
+    let amt_value = amt.value;
+    let calc = amt_value * actualvalue;
+    msg.innerText = `${amt_value} ${fromCurr.value} = ${calc} ${toCurr.value}`;
+
 }
 
-btn.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  exchange();
-});
+for(select of dropdown){
+    for(currCode in countryList){
+        let new_option = document.createElement("option");
+        new_option.value = currCode;
+        new_option.innerText = currCode;
+        select.append(new_option); 
+
+        if (currCode  === "USD" && select.id === "from"){
+            new_option.selected = true;
+            update_flag(select);
+            exchange();
+        }
+        else if (currCode  === "INR" && select.id === "to"){
+            new_option.selected = true;
+            update_flag(select);
+            exchange();
+        }
+    }
+
+    select.addEventListener("change",(evt)=>{
+        update_flag(evt.target);
+        exchange();
+
+    })
+
+}
 
 
 
 
+
+btn.addEventListener("click",()=>{
+    exchange();
+})
+
+exicon.addEventListener("click", ()=>{
+    excurr();
+})
