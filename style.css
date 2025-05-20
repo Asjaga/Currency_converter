@@ -110,7 +110,7 @@ button:active{
 }
 
 #copy{
-    margin-top: 3.4rem;
+    margin-top: 3.1rem;
     font-size: 0.9rem;
 }
 
@@ -122,7 +122,7 @@ button:active{
 
   .form {
     width: 90vw;   /* screen ke 90% width */
-    height: 510px;  /* height auto ho jaye */
+    height: 507px;  /* height auto ho jaye */
     padding: 1rem;
     box-shadow: 2px 2px 20px 5px black; /* thoda halka shadow */
   }
