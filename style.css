@@ -118,7 +118,7 @@ button:active{
 @media screen and (max-width: 600px) {
     .form{
         width: 85%;
-        height: auto;
+        height: 500px;
     }
     h1{
         font-size: 1.5rem;
