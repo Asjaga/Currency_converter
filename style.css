@@ -113,15 +113,3 @@ button:active{
     margin-top: 1.5rem;
     font-size: 0.9rem;
 }
-
-
-@media screen and (max-width: 600px) {
-    .form{
-        width: 85%;
-        height: 500px;
-    }
-    h1{
-        font-size: 1.5rem;
-    }
-
-}
